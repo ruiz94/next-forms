@@ -8,7 +8,8 @@ let sql = postgres(process.env.DATABASE_URL || process.env.POSTGRES_URL!, {
 });
 
 export default async function Home() {
-  let todos = await sql`SELECT * FROM todos`;
+  // let todos = await sql`SELECT * FROM todos`;
+  let todos = []
 
   return (
     <main>
